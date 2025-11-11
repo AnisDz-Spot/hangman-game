@@ -9,7 +9,7 @@ interface GameButtonProps {
   iconStyle?: string;
   link?: string;
   position?: string;
-  onClick?: () => void; // ✅ new prop
+  onClick?: () => void;
 }
 
 const GameButton = ({
@@ -24,7 +24,6 @@ const GameButton = ({
 
   const handleBtnNav = () => {
     if (onClick) {
-      // ✅ custom action has priority
       onClick();
     } else if (link) {
       router.push(link);

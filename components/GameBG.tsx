@@ -10,7 +10,6 @@ const GameBG = () => {
   const checkScreenSize = useCallback(() => {
     if (typeof window !== "undefined") {
       const newIsMobile = window.innerWidth < MOBILE_BREAKPOINT;
-      // Only trigger re-render if the state actually changes
       if (newIsMobile !== isMobile) {
         setIsMobile(newIsMobile);
       }

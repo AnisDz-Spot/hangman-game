@@ -22,7 +22,7 @@ const InstructionsPage = () => {
 
   return (
     <div className="w-[80vw] max-lg:w-[90vw] text-white py-15 text-center mx-auto">
-      <GameHeader title="How to Play" />
+      <GameHeader title="How to Play" position="absolute" />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-lg:gap-6 mt-16">
         {instrcutions.map((item, i) => (
           <InstructionsCard

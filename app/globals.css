@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+  --night-tom: rgb(52, 74, 186, 0.9), rgb(0, 20, 121, 0.9);
+  --pink-blue: rgb(254, 113, 254), rgb(36, 98, 255);
+  --pink: #fe71fe;
+  --outer-shadow: rgb(20, 14, 102);
+  --inner-shadow: rgb(60, 116, 255);
+  --text-stroke: 20px #243041;
+}
+
+@theme {
+  --color-night-mu: #344abae6;
+  --color-major-tom: #001479e6;
+  --color-pink-500: var(--pink);
+  --color-lavender: rgb(136, 125, 192);
+  --shadow-game: inset 0 2px 0 3px var(--outer-shadow),
+    inset 0 1px 0 6px var(--inner-shadow);
+  --shadow-letters: inset 0 -2px 0 3px var(--outer-shadow),
+    inset 0 1px 0 6px var(--inner-shadow);
+}
+
+@theme inline {
+  --font-elite: var(--font-elite);
+}
+
+@media (prefers-color-scheme: dark) {
+}
+
+body {
+  font-family: var(--font-elite), Arial, Helvetica, sans-serif;
+}

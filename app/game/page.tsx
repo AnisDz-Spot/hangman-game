@@ -8,15 +8,17 @@ import Menu from "@/components/Menu";
 import Image from "next/image";
 import MainGame from "@/components/MainGame";
 import { useGameStore } from "@/store/gameStore";
+import HintPopup from "@/components/HintPopup";
 
 const GamePage = () => {
   const params = useSearchParams();
-  const category = params.get("category");
   const router = useRouter();
-  const setElapsedTime = useGameStore((state) => state.setElapsedTime);
+  const category = params.get("category");
+  const hint = useGameStore((state) => state.hint);
   const timer = useGameStore((state) => state.timer);
   const isWin = useGameStore((state) => state.isWin);
   const setLife = useGameStore((state) => state.setLife);
+  const setElapsedTime = useGameStore((state) => state.setElapsedTime);
 
   const [isVisible, setIsVisible] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
@@ -100,7 +102,7 @@ const GamePage = () => {
   };
 
   return (
-    <div className="w-full min-h-screen text-white py-15 text-center mx-auto px-5 lg:px-30">
+    <div className="relative w-full min-h-screen text-white py-15 text-center mx-auto px-5 lg:px-30">
       <nav className="relative flex justify-between items-center">
         <div className="flex items-center gap-10">
           <GameButton
@@ -154,12 +156,13 @@ const GamePage = () => {
       </nav>
       <AnimatePresence>
         {(isVisible || globalLife === 0 || isWin) && (
-          <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-40">
+          <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-999">
             <Menu menuRef={menuRef} handleMenuBtns={handleMenuBtns} />
           </div>
         )}
       </AnimatePresence>
       <MainGame />
+      <HintPopup hint={hint} />
     </div>
   );
 };

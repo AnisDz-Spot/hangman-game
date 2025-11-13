@@ -15,5 +15,5 @@ export const getWordByCategory = (category: string) => {
     categoryData[0].entries[
       Math.floor(Math.random() * categoryData[0].entries.length)
     ];
-  return word.entry;
+  return word;
 };

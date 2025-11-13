@@ -20,17 +20,17 @@ const MainGame = () => {
   const decreaseLife = useGameStore((state) => state.decreaseLife);
   const setPlayerGuess = useGameStore((state) => state.setPlayerGuess);
   const setCurrentWord = useGameStore((state) => state.setCurrentWord);
+  const setHint = useGameStore((state) => state.setHint);
   const setCurrentCategory = useGameStore((state) => state.setCurrentCategory);
 
   useEffect(() => {
     const word = getWordByCategory(category);
-    console.log(word);
-
     setCurrentCategory(category);
-    setCurrentWord(word.toUpperCase());
+    setCurrentWord(word.entry.toUpperCase());
+    setHint(word.hint);
 
-    const wordToObj = word
-      ?.toUpperCase()
+    const wordToObj = word?.entry
+      .toUpperCase()
       .split("")
       .map((letter) => ({
         value: letter,

@@ -5,6 +5,7 @@ export const useGameStore = create<GameStore>((set) => ({
   life: 5,
   timer: 180,
   currentWord: "",
+  hint: "",
   playerGuess: [],
   category: "",
   isWin: false,
@@ -14,6 +15,7 @@ export const useGameStore = create<GameStore>((set) => ({
   setTimer: () => set({ timer: 180 }),
   setElapsedTime: () => set((state) => ({ timer: state.timer - 1 })),
   setCurrentWord: (word) => set({ currentWord: word }),
+  setHint: (txt) => set({ hint: txt }),
   setPlayerGuess: (guess) =>
     set((state) => ({
       playerGuess: [...state.playerGuess, guess],

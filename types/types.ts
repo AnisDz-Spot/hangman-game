@@ -18,6 +18,7 @@ export interface GameStore {
   life: number;
   timer: number;
   currentWord: string;
+  hint: string;
   playerGuess: string[];
   category: string;
   isWin: boolean;
@@ -27,6 +28,7 @@ export interface GameStore {
   setTimer: () => void;
   setElapsedTime: () => void;
   setCurrentWord: (word: string) => void;
+  setHint: (txt: string) => void;
   setPlayerGuess: (guess: string) => void;
   setCurrentCategory: (cat: string) => void;
   setWinGame: () => void;

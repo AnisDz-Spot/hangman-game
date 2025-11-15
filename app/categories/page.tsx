@@ -6,9 +6,9 @@ const page = () => {
   const categories = getCategories();
 
   return (
-    <div className="w-[80vw] min-h-screen max-lg:w-[90vw] text-white py-15 text-center mx-auto">
+    <div className="w-full lg:w-[90vw] min-h-screen max-lg:w-[90vw] text-white py-15 text-center mx-auto">
       <GameHeader title="Pick a Category" position="absolute" />
-      <div className="min-h-[400px] grid grid-cols-1 md:grid-cols-3 gap-10 mt-30">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-30">
         {categories?.map((c, index) => (
           <CategoryBox
             key={index}

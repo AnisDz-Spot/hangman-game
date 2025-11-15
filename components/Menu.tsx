@@ -9,6 +9,8 @@ interface MenuProps {
 const Menu = ({ menuRef, handleMenuBtns }: MenuProps) => {
   const globalLife = useGameStore((state) => state.life);
   const isWin = useGameStore((state) => state.isWin);
+  const btnStyle =
+    "bg-blue-500 hover:bg-blue-600 duration-200 text-white text-xl sm:text-2xl px-12 py-4 rounded-[40px] shadow-[inset_0_-2px_0_3px_rgb(20,14,102),inset_0_1px_0_6px_rgb(60,116,255)] cursor-pointer";
 
   return (
     <motion.div
@@ -32,22 +34,22 @@ const Menu = ({ menuRef, handleMenuBtns }: MenuProps) => {
           top: "150vh",
           transition: { duration: 0.5, ease: "easeOut" },
         }}
-        className="relative max-sm:w-[80vw] w-[600px] h-[500px] py-8 rounded-[72px] flex flex-col justify-center gap-4 items-center bg-linear-(--night-tom) shadow-[inset_0_-8px_0_4px_#140e66,inset_0_6px_0_9px_#2463ff] z-10"
+        className="relative w-[95vw] sm:w-[600px] h-[500px] py-8 rounded-[72px] flex flex-col justify-center gap-2 sm:gap-4 items-center bg-linear-(--night-tom) shadow-[inset_0_-8px_0_4px_#140e66,inset_0_6px_0_9px_#2463ff] z-10"
       >
-        <h3 className="text-[78px] font-bold text-white drop-shadow-[0_5px_15px_#000]">
+        <h3 className="text-5xl sm:text-[78px] mb-4 font-bold text-white drop-shadow-[0_5px_15px_#000]">
           {isWin ? "Winner 🎉" : globalLife === 0 ? "Loser 😭" : "Paused"}
         </h3>
         {globalLife > 0 && !isWin ? (
           <button
             onClick={() => handleMenuBtns("continue")}
-            className="bg-blue-500 hover:bg-blue-600 duration-200 text-white text-2xl px-12 py-4 rounded-[40px] shadow-[inset_0_-2px_0_3px_rgb(20,14,102),inset_0_1px_0_6px_rgb(60,116,255)] cursor-pointer"
+            className={btnStyle}
           >
             Continue
           </button>
         ) : (
           <button
             onClick={() => handleMenuBtns("new-category")}
-            className="bg-blue-500 hover:bg-blue-600 duration-200 text-white text-2xl px-12 py-4 rounded-[40px] shadow-[inset_0_-2px_0_3px_rgb(20,14,102),inset_0_1px_0_6px_rgb(60,116,255)] cursor-pointer"
+            className={btnStyle}
           >
             New Game
           </button>
@@ -55,7 +57,7 @@ const Menu = ({ menuRef, handleMenuBtns }: MenuProps) => {
         {globalLife > 0 && !isWin && (
           <button
             onClick={() => handleMenuBtns("new-category")}
-            className="my-5 bg-blue-500 hover:bg-blue-600 duration-200 text-white text-2xl px-12 py-4 rounded-[40px] shadow-[inset_0_-2px_0_3px_rgb(20,14,102),inset_0_1px_0_6px_rgb(60,116,255)] cursor-pointer"
+            className={`${btnStyle} my-5`}
           >
             New Category
           </button>
@@ -63,7 +65,7 @@ const Menu = ({ menuRef, handleMenuBtns }: MenuProps) => {
         {globalLife > 0 && !isWin && (
           <button
             onClick={() => handleMenuBtns("quit")}
-            className="bg-pink-600 hover:bg-[rgb(199,21,133)] duration-200 text-white text-2xl px-12 py-4 rounded-[40px] shadow-[inset_0_-2px_0_3px_rgb(20,14,102),inset_0_1px_0_6px_rgb(255,20,147)] cursor-pointer"
+            className="bg-pink-600 hover:bg-[rgb(199,21,133)] duration-200 text-white text-xl sm:text-2xl px-12 py-4 rounded-[40px] shadow-[inset_0_-2px_0_3px_rgb(20,14,102),inset_0_1px_0_6px_rgb(255,20,147)] cursor-pointer"
           >
             Quit Game
           </button>

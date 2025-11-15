@@ -91,17 +91,12 @@ const MainGame = () => {
         {wordObject?.map((char, i) => (
           <p
             key={i}
-            className={`w-28 h-32 ${
+            className={`w-24 h-28 lg:w-28 lg:h-32 ${
               char.value !== " " ? "bg-blue-800 shadow-letters" : ""
             } rounded-[40px] text-5xl grid place-items-center font-elite transition-all duration-300 ${
               char.isChecked ? "opacity-100 text-white" : "opacity-25"
             }
-                        // Added margin for spaces for multi-word phrases
-                        ${
-                          char.value === " "
-                            ? "m-4 bg-transparent shadow-none"
-                            : ""
-                        }`}
+              ${char.value === " " ? "m-4 bg-transparent shadow-none" : ""}`}
           >
             {char.isChecked ? char.value : null}
           </p>

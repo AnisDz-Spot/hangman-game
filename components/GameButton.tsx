@@ -33,7 +33,7 @@ const GameButton = ({
   return (
     <button
       onClick={handleBtnNav}
-      className={`${position} left-0 w-20 h-20 max-lg:w-16 max-lg:h-16 bg-[linear-gradient(#fe71fe,#7199ff)] 
+      className={`${position} left-0 w-14 h-14 lg:w-16 lg:h-16 bg-[linear-gradient(#fe71fe,#7199ff)] 
         hover:bg-[linear-gradient(#fe71fe,#95b3fe)] 
         shadow-[inset_0_-6px_0_7px_rgb(157,45,245,0.25)] 
         rounded-full cursor-pointer 
@@ -44,7 +44,7 @@ const GameButton = ({
         alt={alt}
         width={39}
         height={37}
-        className={iconStyle || "w-auto h-auto max-lg:w-8 max-lg:h-[30px]"}
+        className={iconStyle || "w-7 h-auto"}
       />
     </button>
   );

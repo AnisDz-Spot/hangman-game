@@ -102,27 +102,27 @@ const GamePage = () => {
   };
 
   return (
-    <div className="relative w-full min-h-screen text-white py-15 text-center mx-auto px-5 lg:px-30">
-      <nav className="relative flex justify-between items-center">
-        <div className="flex items-center gap-10">
+    <div className="relative w-full min-h-screen text-white py-15 text-center mx-auto px-5 lg:px-10">
+      <nav className="relative grid grid-cols-3 gap-10 justify-between items-center">
+        <div className="flex items-center col-span-2 lg:col-span-1 gap-4 md:gap-6">
           <GameButton
             icon="/icon-menu.svg"
             alt="Game Menu"
             position="relative"
             onClick={handleShowMenu}
           />
-          <h1 className="text-4xl sm:text-5xl font-semibold capitalize tracking-wider">
+          <h1 className="text-[36px] lg:text-4xl font-semibold capitalize tracking-wider">
             {category}
           </h1>
         </div>
         <div
-          className={`text-6xl ${
+          className={`flex items-center justify-end lg:justify-center text-5xl ${
             timer <= 30 ? "text-red-500" : "text-inherit"
           }`}
         >
           {formatTime(timer)}
         </div>
-        <div className="flex items-center gap-4 sm:gap-10">
+        <div className="max-lg:col-span-full place-content-center flex items-center gap-4 sm:gap-10">
           <div className="relative grid grid-cols-5 w-[280px] h-8 border-8 border-white overflow-hidden rounded-full gap-0.5">
             <AnimatePresence initial={false}>
               {Array.from({ length: globalLife }).map((_, i) => (
@@ -150,7 +150,7 @@ const GamePage = () => {
             alt="Heart Icon"
             width={54}
             height={50}
-            className="w-auto h-auto"
+            className="w-10 h-auto lg:w-13 max-lg:hidden"
           />
         </div>
       </nav>

@@ -21,7 +21,7 @@ const GameHeader = ({
       <motion.h1
         initial={{ scale: 0 }}
         animate={{ scale: 1, transition: { duration: 1.2, ease: "easeOut" } }}
-        className="text-7xl max-lg:text-5xl max-md:text-4xl uppercase font-bold text-center text-white"
+        className="lg:text-6xl text-5xl max-md:text-4xl uppercase font-bold text-center text-white"
       >
         {title}
       </motion.h1>

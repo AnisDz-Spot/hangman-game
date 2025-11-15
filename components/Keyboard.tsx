@@ -15,7 +15,7 @@ const Keyboard = ({
   };
 
   return (
-    <main className="w-full grid grid-cols-9 gap-6">
+    <main className="w-full grid grid-cols-4 sm:grid-cols-5 lg:grid-cols-9 gap-2 sm:gap-4">
       {alphabet.map((char, i) => (
         <motion.button
           key={i}
@@ -27,7 +27,7 @@ const Keyboard = ({
             transition: { duration: 0.5, delay: i * 0.1 },
           }}
           onClick={(e) => handleLetterClick(e.target as HTMLButtonElement)}
-          className="w-28 h-22 bg-white disabled:bg-white/20 text-blue-800 font-semibold text-3xl rounded-2xl flex items-center justify-center cursor-pointer disabled:cursor-not-allowed active:hover:bg-blue-800 active:hover:text-white hover:scale-115 disabled:hover:scale-none duration-200"
+          className="w-auto h-24 sm:h-22 bg-white disabled:bg-white/20 text-blue-800 font-semibold text-3xl rounded-2xl flex items-center justify-center cursor-pointer disabled:cursor-not-allowed active:hover:bg-blue-800 active:hover:text-white hover:scale-105 lg:hover:scale-115 disabled:hover:scale-none duration-200"
         >
           {char}
         </motion.button>

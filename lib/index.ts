@@ -1,6 +1,5 @@
 import { GameData, Category } from "@/types/types";
 import staticData from "@/db/data.json";
-import { useGameStore } from "@/store/gameStore";
 
 const data: GameData = staticData as GameData;
 

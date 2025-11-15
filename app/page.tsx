@@ -30,7 +30,7 @@ export default function Home() {
         width={374}
         height={185}
         loading="eager"
-        className="absolute top-0 max-sm:w-[300px] transform -translate-y-1/2"
+        className="absolute top-0 max-sm:w-[250px] transform -translate-y-1/2"
       />
       <button
         onClick={() => handleNavigation("/categories")}

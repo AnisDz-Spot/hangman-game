@@ -206,7 +206,7 @@
     {
       "key": "sports",
       "label": "Sports",
-      "icon": "⚽",
+      "icon": "🏃",
       "entries": [
         { "entry": "Soccer", "hint": "The world's most popular sport, played with a spherical ball." },
         { "entry": "Basketball", "hint": "Played with two teams of five, aiming to shoot a ball through a hoop." },
@@ -232,7 +232,7 @@
     {
       "key": "animals",
       "label": "Animals",
-      "icon": "🐾",
+      "icon": "🐶",
       "entries": [
         { "entry": "Lion", "hint": "Known as the 'King of the Jungle'." },
         { "entry": "Tiger", "hint": "The largest species of cat, known for its stripes." },
@@ -259,7 +259,7 @@
     {
       "key": "fruits",
       "label": "Fruits",
-      "icon": "🍎",
+      "icon": "🍉",
       "entries": [
         { "entry": "Apple", "hint": "Often red or green; keeps the doctor away." },
         { "entry": "Banana", "hint": "A long, curved, yellow fruit, high in potassium." },
@@ -284,7 +284,7 @@
     {
       "key": "vegetables",
       "label": "Vegetables",
-      "icon": "🥦",
+      "icon": "🌽",
       "entries": [
         { "entry": "Carrot", "hint": "A long, orange root vegetable; rabbits love them." },
         { "entry": "Potato", "hint": "A starchy tuber, staple in many diets; can be mashed or fried." },
@@ -309,7 +309,7 @@
     {
       "key": "brands",
       "label": "Brands",
-      "icon": "🏢",
+      "icon": "🔖",
       "entries": [
         { "entry": "Nike", "hint": "Known for the 'Swoosh' logo and the slogan 'Just Do It'." },
         { "entry": "Apple", "hint": "Famous for the iPhone and Mac computers." },
@@ -360,7 +360,7 @@
     {
       "key": "music",
       "label": "Music",
-      "icon": "🎵",
+      "icon": "🎶",
       "entries": [
         { "entry": "Pop", "hint": "Short for 'popular'; characterized by catchy melodies." },
         { "entry": "Rock", "hint": "Evolved from rock and roll; known for electric guitars and strong rhythms." },
@@ -385,7 +385,7 @@
     {
       "key": "vehicles",
       "label": "Vehicles",
-      "icon": "🚗",
+      "icon": "🚘",
       "entries": [
         { "entry": "Car", "hint": "The most common form of personal road transport." },
         { "entry": "Truck", "hint": "A large vehicle designed to transport cargo." },
